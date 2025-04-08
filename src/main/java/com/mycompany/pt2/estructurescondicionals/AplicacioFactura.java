@@ -14,14 +14,16 @@ public class AplicacioFactura {
 
     public static void main(String[] args) {
         
-        double preu; //Creem un double que serà el valor del preu.
-        int articles;
-        double totalArticles;
+        double preu; //double que serà el valor del preu.
+        int articles; // int que serà la quantitat d'articles.
+        double totalArticles; // double per indicar el preu total.
         /*
-            Creem final que serà el valor del marge. Aquest marge és el que
+            final que serà el valor del marge. Aquest marge és el que
             compte per fer el descompte.
         */
         final int MARGE = 100;
+        // finals que seran el descompte i l'IVA a aplicar.
+        final double DESCOMPTE = 0.05, IVA_INCREMENT = 0.21;
         
         Scanner lector = new Scanner(System.in); // Declarem l'escàner.
         //Preguntem a l'usuari per el preu.
@@ -38,7 +40,7 @@ public class AplicacioFactura {
         System.out.println("El preu total de tots els articles és: " +
                 totalArticles + "€.");
         //Creem un double, on es calcula el descompte del 21% del IVA en el preu.
-        double IVA = totalArticles * 0.21;
+        double IVA = totalArticles * IVA_INCREMENT;
         //Creem un double. És el resultat del càlcul del IVA al preu.
         double resultat = IVA + totalArticles;
         
@@ -49,7 +51,7 @@ public class AplicacioFactura {
         */
         if(resultat >= MARGE){
             //Creem un double on es calcula el descompte del 5%.
-            double descompte = resultat * 0.05;
+            double descompte = resultat * DESCOMPTE;
             //Creem un double on es resta el descompte al preu.
             double descompteAplicat = resultat - descompte;
             //Frase que mostra el resultat del IVA afegit.
