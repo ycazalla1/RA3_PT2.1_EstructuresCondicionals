@@ -15,7 +15,7 @@
     Utilitzeu l'estructura IF i considereu el cas en què no es triï cap de les opcions vàlides.
   </li>
 </ol>
-<b>
-  NOTA: El programa ha de funcionar amb majúscules i amb minúscules.
-</b>
+
+> [!NOTE]
+> El programa ha de funcionar amb majúscules i amb minúscules.
 
